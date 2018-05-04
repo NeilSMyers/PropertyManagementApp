@@ -16,7 +16,7 @@ class Newsletter extends Component {
           <div>
             02 jan 18
           </div>
-            <NewsletterArchive/>
+            <NewsletterArchive archive={this.props.archive}/>
         </div>
         <div>
           main ContentScriptGlobalScope. the latest newsletter.
@@ -27,7 +27,6 @@ class Newsletter extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log(state.newsletter.archive)
   return { archive: state.newsletter.archive }
 }
 
