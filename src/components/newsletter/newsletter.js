@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import NewsletterArchive from './newsletter_archive';
+import NewsletterContent from './newsletter_content';
 
 class Newsletter extends Component {
 
@@ -19,7 +20,7 @@ class Newsletter extends Component {
             <NewsletterArchive archive={this.props.archive}/>
         </div>
         <div className="col-md-9">
-          main ContentScriptGlobalScope. the latest newsletter.
+          <NewsletterContent latestItem={this.props.latestItem}/>
         </div>
       </div>
     )
@@ -27,7 +28,11 @@ class Newsletter extends Component {
 }
 
 function mapStateToProps(state) {
-  return { archive: state.newsletter.archive }
+  console.log(state.newsletter.latestItem);
+  return {
+    archive: state.newsletter.archive,
+    latestItem: state.newsletter.latestItem 
+  }
 }
 
 export default connect(mapStateToProps, actions)(Newsletter);
