@@ -13,6 +13,9 @@ class NewsletterContent extends Component {
             <Link to={`/newsletter/edit/${this.props.latestItem._id}`}>
               <div>EditNewsletter</div>
             </Link>
+            <Link to={`/newsletter/add/`}>
+              <div>AddNewsletter</div>
+            </Link>
           </div>
           <p>
             {this.props.latestItem.body}
