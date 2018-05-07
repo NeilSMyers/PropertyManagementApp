@@ -21,6 +21,7 @@ import Newsletter from './components/newsletter/newsletter';
 import NewsletterDetail from './components/newsletter/newsletter_detail';
 import EditNewsletter from './components/newsletter/newsletter_edit';
 import AddNewsletter from './components/newsletter/newsletter_add';
+import SupportRequest from './components/supportRequest/supportRequest';
 
 function main() {
   ReactDOM.render(
@@ -28,6 +29,7 @@ function main() {
       <Router history={history}>
         <Header>
           <Switch>
+          <Route path="/" exact component={Signin}></Route>
             <Route path="/signin" component={Signin}></Route>
             <Route path="/signup" component={Signup}></Route>
 
@@ -35,6 +37,8 @@ function main() {
             <Route path="/newsletter/detail/:_id" component={NewsletterDetail}></Route>
             <Route path="/newsletter/edit/:_id" component={EditNewsletter}></Route>
             <Route path="/newsletter/add" component={AddNewsletter}></Route>
+
+            <Route path="/support-request" component={SupportRequest}></Route>
           </Switch>
         </Header>
       </Router>
