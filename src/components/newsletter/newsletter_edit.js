@@ -19,8 +19,8 @@ class EditNewsletter extends Component {
     )
   }
 
-  handleFormSubmit({email, password}) {
-
+  handleFormSubmit({title, body}) {
+    this.props.saveNewsletterEdit({title, body}, this.props.match.params._id)
   }
 
   render() {
