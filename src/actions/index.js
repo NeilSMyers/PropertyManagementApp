@@ -33,7 +33,7 @@ export function fetchNewsletterArchive(callback) {
           type: FETCH_NEWSLETTER_ARCHIVE,
           payload: response.data
         })
-        if(callback()) { callback() }
+        if(callback) { callback() }
       })
   }
 }
