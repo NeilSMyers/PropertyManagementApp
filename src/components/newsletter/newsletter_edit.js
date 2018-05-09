@@ -12,10 +12,10 @@ class EditNewsletter extends Component {
 
   renderInput(field) {
     return (
-    <div>
-      <label htmlFor={field.input.name}>{field.input.name}</label>
-      <input className="form-control" {...field.input}/>
-    </div>
+      <div>
+        <label htmlFor={field.input.name}>{field.input.name}</label>
+        <input className="form-control" {...field.input}/>
+      </div>
     )
   }
 

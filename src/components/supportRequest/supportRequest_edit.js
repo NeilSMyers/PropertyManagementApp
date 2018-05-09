@@ -7,15 +7,15 @@ import * as actions from '../../actions';
 class EditSupportRequest extends Component {
 
   componentDidMount() {
-    // this.props.fetchSupportRequestById(this.props.match.params._id)
+    this.props.fetchSupportRequestById(this.props.match.params._id)
   }
 
   renderInput(field) {
     return (
-    <div>
-      <label htmlFor={field.input.name}>{field.input.name}</label>
-      <input className="form-control" {...field.input}/>
-    </div>
+      <div>
+        <label htmlFor={field.input.name}>{field.input.name}</label>
+        <input className="form-control" {...field.input}/>
+      </div>
     )
   }
 
@@ -32,7 +32,7 @@ class EditSupportRequest extends Component {
       <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
         <Field name="title" component={this.renderInput} type="text"/>
         <Field name="body" component={this.renderInput} type="textarea"/>
-        <img src={this.props.initialValues.imageUrl}/>
+        {/* <img src={this.props.initialValues.imageUrl}/> */}
         <Link to="/newsletter"><div>Cancel</div></Link>
         <button action="submit" className="btn btn-primary">Save</button>
       </form>

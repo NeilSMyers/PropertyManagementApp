@@ -41,7 +41,7 @@ function main() {
             <Route path="/newsletter/edit/:_id" component={EditNewsletter}></Route>
             <Route path="/newsletter/add" component={AddNewsletter}></Route>
 
-            <Route path="/support-request" component={SupportRequest}></Route>
+            <Route path="/support-request" exact component={SupportRequest}></Route>
             <Route path="/support-request/edit/:_id" component={EditSupportRequest}></Route>
           </Switch>
         </Header>
