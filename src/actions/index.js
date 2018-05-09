@@ -94,6 +94,7 @@ export function fetchSupportRequests(callback) {
           type: FETCH_SUPPORT_REQUESTS,
           payload: response.data
         })
+        if(callback) { callback() }
       })
   }
 }
@@ -106,3 +107,16 @@ export function fetchSupportRequestById(_id) {
     }
   )
 }
+
+export function saveSupportRequestEdit({title, body}, _id, callback) {
+  return function(dispatch) {
+    axios.put(`${ROOT_URL}/support-request/edit/${_id}`, {title, body}, {
+      headers: { authorization: localStorage.getItem('token') }
+    })
+      .then(response => {
+        dispatch(fetchNewsletterArchive(() => {
+          callback()
+        }))
+      })
+  }
+  }
