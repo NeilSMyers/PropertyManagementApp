@@ -9,7 +9,7 @@ const addTitle = (Child, title) => {
           <div className="add-title__text">
             {title}
           </div>
-            <Child/>
+            <Child {...this.props}/>
         </div>
       )
     }
