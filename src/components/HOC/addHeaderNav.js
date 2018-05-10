@@ -11,7 +11,7 @@ const addHeaderNav = (Child) => {
               <span>Newsletter</span>
             </Link>
             <Link to="/support-request">
-            <span>Requests</span>
+              <span>Requests</span>
             </Link>
           </div>
             <Child {...this.props}/>

@@ -6,7 +6,6 @@ import * as actions from '../../actions';
 import SupportRequestContent from './supportRequest_content';
 
 import { Link } from 'react-router-dom';
-
 import addHeaderNav from '../HOC/addHeaderNav';
 
 class SupportRequest extends Component {
