@@ -7,6 +7,20 @@
   color: $color-gray1;
 }
 
+.edit-newsletter {
+  position: absolute;
+  right: 10px;
+  bottom: 12px;
+  color: white;
+  border-color: white;
+}
+
+.add-newsletter {
+  position: absolute;
+  right: 10px;
+  top : -36px;
+}
+
 .newsletter-content {
   height: 665px;
   width: 961px;
