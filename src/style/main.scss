@@ -8,17 +8,11 @@ $color-gray1: #4d4d4d;
 @import './addHeaderNav';
 @import './newsletter_content';
 @import './newsletter';
+@import './infoBox';
 
 ul {
   margin: 0;
   padding: 0;
-}
-
-.info-box {
-  width: 250px;
-  height: 250px;
-  border: 1px solid $color-red;
-  margin: 25px;
 }
 
 body {
