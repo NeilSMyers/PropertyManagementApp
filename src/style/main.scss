@@ -9,10 +9,12 @@ $color-gray1: #4d4d4d;
 @import './newsletter_content';
 @import './newsletter';
 @import './infoBox';
+@import './newsletter_archive';
 
 ul {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 body {
