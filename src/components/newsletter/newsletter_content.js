@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 class NewsletterContent extends Component {
 
@@ -11,10 +12,14 @@ class NewsletterContent extends Component {
             <img src={this.props.latestItem.imageUrl}/>
             <h2>{this.props.latestItem.title}</h2>
             <Link to={`/newsletter/edit/${this.props.latestItem._id}`}>
-              <span>EditNewsletter</span>
+              <div className="action edit-newsletter">
+                <FontAwesomeIcon icon="pencil-alt"/>
+              </div>
             </Link>
             <Link to={`/newsletter/add/`}>
-              <span>AddNewsletter</span>
+              <div className="action add-newsletter">
+                <FontAwesomeIcon icon="plus"/>
+              </div>
             </Link>
           </div>
           <p>
@@ -34,4 +39,4 @@ class NewsletterContent extends Component {
   }
 }
 
-export default NewsletterContent
+export default NewsletterContent;

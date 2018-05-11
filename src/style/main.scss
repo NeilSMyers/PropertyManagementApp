@@ -1,4 +1,5 @@
 $color-red: #ba0000;
+$color-gray1: #4d4d4d;
 
 @import './header';
 @import './addHeaderBorder';
@@ -6,6 +7,7 @@ $color-red: #ba0000;
 @import './signin';
 @import './addHeaderNav';
 @import './newsletter_content';
+@import './newsletter';
 
 ul {
   margin: 0;
