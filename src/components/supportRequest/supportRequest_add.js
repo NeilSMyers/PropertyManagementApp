@@ -4,13 +4,14 @@ import { Field, reduxForm } from 'redux-form';
 import * as actions from '../../actions';
 import { connect } from 'react-redux';
 
+
 class AddSupportRequest extends Component {
 
   renderInput(field) {
     return (
     <div>
       <label htmlFor={field.input.name}>{field.input.name}</label>
-      <input className="form-control" {...field.input}/>
+      <input {...field.input}/>
     </div>
     )
   }
@@ -30,7 +31,7 @@ class AddSupportRequest extends Component {
         <Field name="body" component={this.renderInput} type="textarea"/>
 
         <Link to="/support-request"><div>Cancel</div></Link>
-        <button action="submit" className="btn btn-primary">Save</button>
+        <button action="submit">Save</button>
       </form>
     )
   }
